@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="gherkin-cucumber-selenium-java" />
         <module name="gherkincucumberseleniumjava" />
+        <module name="Web-Gherkin-Cucumber-Selenium-Java" />
       </profile>
     </annotationProcessing>
   </component>
