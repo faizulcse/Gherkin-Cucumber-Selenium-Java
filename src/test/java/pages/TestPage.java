@@ -10,7 +10,6 @@ public class TestPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-
     @FindBy(id ="email") WebElement email;
     @FindBy(id ="pass") WebElement pass;
     @FindBy(id ="loginbutton") WebElement login;

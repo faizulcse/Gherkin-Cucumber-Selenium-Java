@@ -10,7 +10,6 @@ public class BasePage  {
         driver = PropertySettings.getInstance().getCurrentDriver();
     }
 
-
     public void waitFor(double second) {
         try {
             Thread.sleep((int) (1000 * second));
