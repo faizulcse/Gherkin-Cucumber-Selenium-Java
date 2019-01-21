@@ -25,7 +25,7 @@ public class Base {
 				driver = new ChromeDriver(); 
 			}
 			else if(browserName.equals("firefox")){
-			System.setProperty("webdriver.gecko.driver", AppConstant.FIRE_FOX_DRIVER_WINDOWS);	
+			System.setProperty("webdriver.gecko.driver", AppConstant.FIRE_FOX_DRIVER_WINDOWS);
 				driver = new FirefoxDriver(); 
 			}
 		}

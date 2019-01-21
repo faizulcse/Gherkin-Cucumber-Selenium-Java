@@ -12,7 +12,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>2.50.0</version>
+            <version>3.14.0</version>
         </dependency>
 
         <dependency> <!-- juit-4.11 -->
@@ -108,7 +108,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>CucumberWebGui</projectName>
+                            <projectName>CucumberWebReport</projectName>
                             <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
                             <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
                         </configuration>
