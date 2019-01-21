@@ -9,7 +9,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
-
 public class PropertySettings {
 	private PropertySettings(){
 	}
@@ -51,8 +50,7 @@ public class PropertySettings {
 	public void loadData() {
 		try{
 			prop = new Properties();
-			String filePath = AppConstant.SETTING_PATH;
-			prop.load(new FileInputStream(filePath));
+			prop.load(new FileInputStream(AppConstant.SETTING_PATH));
 
 			this.state = 0;
 			this.loged = false;
