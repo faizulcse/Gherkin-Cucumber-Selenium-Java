@@ -40,11 +40,19 @@ public class Base {
 			}
 		}
 
-		PropertySettings.getInstance().setWebDriver(driver);
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		//driver.manage().timeouts().pageLoadTimeout(AppConstant.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(AppConstant.IMPLICIT_WAIT, TimeUnit.SECONDS);
+		if(driver!=null){
+			PropertySettings.getInstance().setWebDriver(driver);
+			driver.manage().window().maximize();
+			driver.manage().deleteAllCookies();
+			//driver.manage().timeouts().pageLoadTimeout(AppConstant.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(AppConstant.IMPLICIT_WAIT, TimeUnit.SECONDS);
+		}
+		else {
+			System.out.println("Please go to 'config >> setting.conf' and set OS & Browser name");
+			System.exit(0);
+		}
+
+
 	}
 
 	public static void stopDriver(){
