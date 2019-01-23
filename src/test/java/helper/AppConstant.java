@@ -1,7 +1,7 @@
 package helper;
 
 public class AppConstant {
-	private AppConstant () { } // prevents instantiation
+	private AppConstant () {} // prevents instantiation
 	
 	public static final String CURRENT_DIR = System.getProperty("user.dir");
 	

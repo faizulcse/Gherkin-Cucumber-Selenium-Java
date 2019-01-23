@@ -93,6 +93,8 @@
                     <includes>
                         <exclude>**/*TestRunner.java</exclude>
                     </includes>
+                    <useFile>false</useFile>
+                    <forkCount>0</forkCount>
                 </configuration>
             </plugin>
 

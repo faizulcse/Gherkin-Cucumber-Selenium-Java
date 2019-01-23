@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Properties;
 
 public class PropertySettings {
-	private PropertySettings(){ }
+	private PropertySettings(){}
 
 	Properties prop = null;
 	private Map<Integer, String> browserList;

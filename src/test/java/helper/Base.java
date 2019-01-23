@@ -16,10 +16,10 @@ public class Base {
 	}
 	
 	public static void startDriver(){
-		String osName = prop.getProperty("os");
+		String osName = System.getProperty("os.name");
 		String browserName = prop.getProperty("browser");
 
-		if(osName.equals("windows")) {
+		if(osName.contains("Windows")) {
 			if(browserName.equals("chrome")){
 				System.setProperty("webdriver.chrome.driver", AppConstant.CHROME_DRIVER_WINDOWS);	
 				driver = new ChromeDriver(); 
@@ -29,7 +29,7 @@ public class Base {
 				driver = new FirefoxDriver(); 
 			}
 		}
-		else if(osName.equals("mac")) {
+		else if(osName.contains("Mac")) {
 			if(browserName.equals("chrome")){
 				System.setProperty("webdriver.chrome.driver", AppConstant.CHROME_DRIVER_MAC);	
 				driver = new ChromeDriver(); 
@@ -51,8 +51,6 @@ public class Base {
 			System.out.println("Please go to 'config >> setting.conf' and set OS & Browser name");
 			System.exit(0);
 		}
-
-
 	}
 
 	public static void stopDriver(){
@@ -60,5 +58,4 @@ public class Base {
 			driver.quit();
 		}
 	}
-	
 }
