@@ -7,11 +7,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-public class Base {
+public class BowserSetUp {
 	public static WebDriver driver;
 	public static Properties prop;
 
-	public Base(){
+	public BowserSetUp(){
 		prop = PropertySettings.getInstance().getProperties();
 	}
 	

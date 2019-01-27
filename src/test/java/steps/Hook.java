@@ -2,11 +2,11 @@ package steps;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import helper.Base;
+import helper.BowserSetUp;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
-public class Hook extends Base {
+public class Hook extends BowserSetUp {
     static Logger log = Logger.getLogger(Hook.class);
     public Hook(){
         PropertyConfigurator.configure("log/log4j.properties");
