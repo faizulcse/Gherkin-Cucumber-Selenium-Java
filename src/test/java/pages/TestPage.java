@@ -17,7 +17,7 @@ public class TestPage extends BasePage {
     public void testClick(){
         email.sendKeys("asdf@gmail.com");
         pass.sendKeys("asdf233");
-        waitFor(2);
+        waitFor(1);
         login.click();
     }
 

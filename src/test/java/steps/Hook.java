@@ -11,6 +11,7 @@ public class Hook extends Base {
     public Hook(){
         PropertyConfigurator.configure("log/log4j.properties");
     }
+
     @Before
     public void setUp(){
         log.debug("Browser is running...");
