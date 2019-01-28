@@ -8,8 +8,13 @@ import org.apache.log4j.PropertyConfigurator;
 
 public class Hook extends BowserSetUp {
     static Logger log = Logger.getLogger(Hook.class);
+    static boolean flag = true;
     public Hook(){
-        PropertyConfigurator.configure("log/log4j.properties");
+
+        if (flag == true){
+            PropertyConfigurator.configure("log/log4j.properties");
+            flag = false;
+        }
     }
 
     @Before

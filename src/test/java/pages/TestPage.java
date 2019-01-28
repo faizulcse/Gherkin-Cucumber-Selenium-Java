@@ -6,7 +6,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class TestPage extends BasePage {
     public TestPage(){
-        super();
         PageFactory.initElements(driver, this);
     }
 

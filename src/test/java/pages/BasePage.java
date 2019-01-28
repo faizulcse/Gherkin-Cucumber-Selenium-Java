@@ -4,7 +4,7 @@ import helper.PropertySettings;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
-public class BasePage  {
+public class BasePage {
     WebDriver driver;
     static Logger log =Logger.getLogger(BasePage.class);
 

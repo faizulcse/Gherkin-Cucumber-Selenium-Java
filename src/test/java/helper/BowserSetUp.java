@@ -21,7 +21,7 @@ public class BowserSetUp {
 
 		if(osName.contains("Windows")) {
 			if(browserName.equals("chrome")){
-				System.setProperty("webdriver.chrome.driver", AppConstant.CHROME_DRIVER_WINDOWS);	
+				System.setProperty("webdriver.chrome.driver", AppConstant.CHROME_DRIVER_WINDOWS);
 				driver = new ChromeDriver(); 
 			}
 			else if(browserName.equals("firefox")){
@@ -31,11 +31,11 @@ public class BowserSetUp {
 		}
 		else if(osName.contains("Mac")) {
 			if(browserName.equals("chrome")){
-				System.setProperty("webdriver.chrome.driver", AppConstant.CHROME_DRIVER_MAC);	
+				System.setProperty("webdriver.chrome.driver", AppConstant.CHROME_DRIVER_MAC);
 				driver = new ChromeDriver(); 
 			}
 			else if(browserName.equals("firefox")){
-			System.setProperty("webdriver.gecko.driver", AppConstant.FIRE_FOX_DRIVER_MAC);	
+			System.setProperty("webdriver.gecko.driver", AppConstant.FIRE_FOX_DRIVER_MAC);
 				driver = new FirefoxDriver(); 
 			}
 		}
