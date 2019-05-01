@@ -1,4 +1,0 @@
-17:12:28,222 DEBUG Hook:16 - Browser is running...
-17:12:44,439 DEBUG Hook:18 - Target URL is: https://www.facebook.com
-17:12:56,333 DEBUG BasePage:16 - waiting for: 2.0 seconds
-17:13:04,344 DEBUG Hook:24 - Browser is closing

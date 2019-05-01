@@ -14,6 +14,7 @@ public class TestPage extends BasePage {
     @FindBy(id ="loginbutton") WebElement login;
 
     public void testClick(){
+        driver.get(baseUrl);
         email.sendKeys("asdf@gmail.com");
         pass.sendKeys("asdf233");
         waitFor(1);

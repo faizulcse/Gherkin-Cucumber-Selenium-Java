@@ -25,4 +25,4 @@ mvn clean install
 
 To run a single feature file or a single test case:
 --------------------------------------------------
-mvn test -Dcucumber.options = "--tags @TestTag"
+mvn test -Dcucumber.options="--tags @TestTag"

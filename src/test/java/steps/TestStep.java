@@ -8,7 +8,8 @@ import pages.TestPage;
 public class TestStep {
     @Then("^I should see the High Five confirmation and freddie hand displayed$")
     public void iShouldSeeTheHighFiveConfirmationAndFreddieHandDisplayed() {
-       new TestPage().testClick();
+        System.out.println("^I should see the High Five confirmation and freddie hand displayed$");
+       //new TestPage().testClick();
 
     }
 
@@ -24,6 +25,11 @@ public class TestStep {
 
     @Given("^I am on the campaigns mobile view$")
     public void iAmOnTheCampaignsMobileView() {
+
+    }
+
+    @Given("^I am on the xxx home page$")
+    public void iAmOnTheXxxHomePage() {
 
     }
 }

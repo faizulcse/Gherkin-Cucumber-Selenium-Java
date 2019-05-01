@@ -2,7 +2,7 @@
 Feature: MailChimp mobile campaigns
 
   Background:
-    Given I am on the campaigns mobile view
+    Given I am on the xxx home page
 
   @MQA-100 @HIGH @smoke
   Scenario: As a test engineer I want to view the campaigns mobile view to verify basic functionality
