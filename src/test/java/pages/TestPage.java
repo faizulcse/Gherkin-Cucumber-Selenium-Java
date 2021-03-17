@@ -11,6 +11,7 @@ public class TestPage extends BasePage {
     WebElement pass;
     @FindBy(id = "loginbutton")
     WebElement login;
+
     public TestPage() {
         PageFactory.initElements(driver, this);
     }

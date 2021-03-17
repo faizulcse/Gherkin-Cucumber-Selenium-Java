@@ -12,12 +12,12 @@ public class Guru99Page extends BasePage {
     WebElement pass;
     @FindBy(id = "loginbutton")
     WebElement login;
+
     public Guru99Page() {
         PageFactory.initElements(driver, this);
     }
 
     public void testClick() {
-        driver.get("http://demo.guru99.com/test/guru99home/");
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", linux);
         waitFor(5);

@@ -11,7 +11,7 @@ imageBuild() {
 }
 
 testRun() {
-    docker run --name $1 ${DOCKER_IMAGE} java -cp target/docker-jenkins-practice-1.0-SNAPSHOT.jar Main
+    docker run --name $1 ${DOCKER_IMAGE} mvn test -Dcucumber.options="--tags @MQA-101"
 }
 
 copyReportsToJenkins() {

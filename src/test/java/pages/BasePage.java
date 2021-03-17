@@ -1,8 +1,8 @@
 package pages;
 
-import helper.Configurations;
+import helper.TestSetup;
 
-public class BasePage extends Configurations {
+public class BasePage extends TestSetup {
     public void waitFor(double second) {
         try {
             Thread.sleep((int) (1000 * second));

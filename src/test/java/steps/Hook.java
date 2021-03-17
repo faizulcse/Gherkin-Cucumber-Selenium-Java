@@ -2,16 +2,16 @@ package steps;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import helper.Configurations;
+import helper.TestSetup;
 
-public class Hook {
+public class Hook extends TestSetup {
     @Before
     public void setUp() {
-        Configurations.openBrowser();
+        TestSetup.startDriver();
     }
 
     @After
     public void tearDown() {
-        Configurations.closeBrowser();
+        TestSetup.closeBrowser();
     }
 }
