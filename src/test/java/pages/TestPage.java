@@ -5,15 +5,17 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class TestPage extends BasePage {
-    public TestPage(){
+    @FindBy(id = "email")
+    WebElement email;
+    @FindBy(id = "pass")
+    WebElement pass;
+    @FindBy(id = "loginbutton")
+    WebElement login;
+    public TestPage() {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(id ="email") WebElement email;
-    @FindBy(id ="pass") WebElement pass;
-    @FindBy(id ="loginbutton") WebElement login;
-
-    public void testClick(){
+    public void testClick() {
         driver.get(baseUrl);
         email.sendKeys("asdf@gmail.com");
         pass.sendKeys("asdf233");

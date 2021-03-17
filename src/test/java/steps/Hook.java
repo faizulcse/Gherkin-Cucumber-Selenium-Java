@@ -6,12 +6,12 @@ import helper.Configurations;
 
 public class Hook {
     @Before
-    public void setUp(){
+    public void setUp() {
         Configurations.openBrowser();
     }
 
     @After
-    public void tearDown(){
+    public void tearDown() {
         Configurations.closeBrowser();
     }
 }
