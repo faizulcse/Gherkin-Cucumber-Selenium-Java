@@ -1,17 +1,15 @@
 # Linux image we are goning to use
-FROM alpine
+FROM maven:3.6.0-jdk-13
 MAINTAINER Faizul Islam (faizulcse@gmail.com)
+
 WORKDIR /app
 USER root
 COPY . .
-RUN chmod 777 driver/chromedriver
 
 # intall JDK
-RUN apk add openjdk8
-ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
-ENV PATH $PATH:$JAVA_HOME/bin
+#RUN apt-get install openjdk-8-jre
+#ENV JAVA_HOME /usr/lib/jvm/openjdk-8-jre
+#ENV PATH $PATH:$JAVA_HOME/bin
 
 # install maven
-RUN apk add maven
-RUN apk add chromium
-RUN mvn clean package
+#RUN apt-get install -y maven
