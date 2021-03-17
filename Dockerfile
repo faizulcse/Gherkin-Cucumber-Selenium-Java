@@ -4,6 +4,7 @@ MAINTAINER Faizul Islam (faizulcse@gmail.com)
 WORKDIR /app
 USER root
 COPY . .
+RUN chmod 777 driver/chromedriver
 
 # intall JDK
 RUN apk add openjdk8
