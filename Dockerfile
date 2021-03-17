@@ -5,4 +5,4 @@ MAINTAINER Faizul Islam (faizulcse@gmail.com)
 WORKDIR /app
 USER root
 COPY . .
-RUN mvn clean package
+RUN ldconfig
