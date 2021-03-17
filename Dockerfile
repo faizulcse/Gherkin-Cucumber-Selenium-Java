@@ -12,4 +12,5 @@ ENV PATH $PATH:$JAVA_HOME/bin
 
 # install maven
 RUN apk add maven
+RUN apk add chromium
 RUN mvn clean package
