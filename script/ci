@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+DOCKER_IMAGE="node-tc"
+
+ROOT="$(git rev-parse --show-toplevel)"
+
+imageBuild() {
+    docker build --tag ${DOCKER_IMAGE} --file "${ROOT}/Dockerfile" "${ROOT}"
+}
+
+testRun() {
+    docker run --name $1 ${DOCKER_IMAGE} java -cp target/docker-jenkins-practice-1.0-SNAPSHOT.jar Main
+}
+
+copyReportsToJenkins() {
+    sourceLocation=$1':/app/reports/.'
+    destinationLocation='.'$2
+    docker cp $sourceLocation $destinationLocation
+}
+
+removeContainer() {
+    docker rm $1
+}
+
+removeImage() {
+    docker rmi ${DOCKER_IMAGE} -f
+}
+"$@"
