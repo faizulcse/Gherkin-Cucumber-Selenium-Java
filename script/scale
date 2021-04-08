@@ -3,4 +3,4 @@ set -euo pipefail
 IFS=$'\n\t'
 set -vx
 
-docker-compose -p ui_test_demo scale chrome=6
+docker-compose -p ui_test_demo scale chrome=5

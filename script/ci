@@ -10,6 +10,10 @@ imageBuild() {
     docker build --tag ${DOCKER_IMAGE} --file "${ROOT}/Dockerfile" "${ROOT}"
 }
 
+startServerWithNode(){
+    docker-compose -f docker-compose.yml -p ui_test_demo up -d --remove-orphans > results/logs/docker-compose.log
+}
+
 testRun() {
     docker run --name $1 ${DOCKER_IMAGE} mvn test -Dcucumber.options="--tags @MQA-101"
 }
@@ -18,6 +22,10 @@ copyReportsToJenkins() {
     sourceLocation=$1':/app/reports/.'
     destinationLocation='.'$2
     docker cp $sourceLocation $destinationLocation
+}
+
+stopServerAndNode(){
+    docker-compose -p ui_test_demo down --remove-orphans
 }
 
 removeContainer() {
