@@ -15,7 +15,7 @@ startServerWithNode(){
 }
 
 testRun() {
-    docker run --name $1 ${DOCKER_IMAGE} mvn test -Dcucumber.options="--tags @MQA-101"
+    docker run --name $1 ${DOCKER_IMAGE} mvn test -Dcucumber.options="--tags @MQA-101" -q
 }
 
 copyReportsToJenkins() {
