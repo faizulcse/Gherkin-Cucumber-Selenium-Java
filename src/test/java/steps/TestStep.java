@@ -8,7 +8,6 @@ import pages.TestPage;
 public class TestStep {
     @Then("^I should see the High Five confirmation and freddie hand displayed$")
     public void iShouldSeeTheHighFiveConfirmationAndFreddieHandDisplayed() {
-        System.out.println("^I should see the High Five confirmation and freddie hand displayed$");
         new TestPage().testClick();
 
     }
