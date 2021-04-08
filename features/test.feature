@@ -4,7 +4,7 @@ Feature: MailChimp mobile campaigns
   Background:
     Given I am on the xxx home page
 
-  @MQA-100 @HIGH @smoke
+  @MQA-101 @HIGH @smoke
   Scenario: As a test engineer I want to view the campaigns mobile view to verify basic functionality
     Then I should see the "Campaigns" page
     And I should see a create campaign iconoing, Completed

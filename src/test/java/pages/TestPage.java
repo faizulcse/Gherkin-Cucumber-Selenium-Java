@@ -17,11 +17,7 @@ public class TestPage extends BasePage {
     }
 
     public void testClick() {
-        driver.get(baseUrl);
-        email.sendKeys("asdf@gmail.com");
-        pass.sendKeys("asdf233");
-        waitFor(1);
-        login.click();
+        System.out.println(driver.getTitle());
     }
 
 }

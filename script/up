@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+set -vx
+
+docker-compose -f docker-compose.yml -p ui_test_demo up -d --remove-orphans > results/logs/docker-compose.log
