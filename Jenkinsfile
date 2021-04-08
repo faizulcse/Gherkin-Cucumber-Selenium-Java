@@ -10,6 +10,10 @@ node('master') {
         sh './script/ci imageBuild'
     }
 
+    stage("Run selenium server and Chrome node"){
+        sh './script/ci startServerWithNode'
+    }
+
     stage("Run Tests") {
 
         def exitCode = sh script: './script/ci testRun ' + containerName, returnStatus: true
@@ -26,6 +30,9 @@ node('master') {
         sh './script/ci copyReportsToJenkins ' + containerName + ' ' + reportsLocation
     }
 
+    stage("Stop selenium server and Chrome node"){
+        sh './script/ci stopServerAndNode'
+    }
 
     stage("Delete Container and Docker Image") {
         sh './script/ci removeContainer ' + containerName
@@ -42,6 +49,5 @@ node('master') {
                 reportName           : 'HTML Report',
                 reportTitles         : ''])
     }
-
 
 }
