@@ -1,7 +1,8 @@
 # Linux image we are goning to use
-FROM ubuntu:latest
+FROM maven:3.6.0-jdk-13
 MAINTAINER Faizul Islam (faizulcse@gmail.com)
 
 WORKDIR /app
 USER root
 COPY . .
+RUN ldconfig
