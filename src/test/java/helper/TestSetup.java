@@ -22,7 +22,7 @@ public class TestSetup {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setBrowserName("chrome");
         try {
-            driver = new RemoteWebDriver(new URL("http://172.17.0.1:4444/wd/hub"), caps);
+            driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), caps);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
