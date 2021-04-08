@@ -15,14 +15,13 @@ import java.util.logging.Logger;
 
 public class TestSetup {
     protected static WebDriver driver;
-    protected static String baseUrl;
 
     public static void startDriver() {
         Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setBrowserName("chrome");
         try {
-            driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), caps);
+            driver = new RemoteWebDriver(new URL("http://172.17.0.1:4444/wd/hub"), caps);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
