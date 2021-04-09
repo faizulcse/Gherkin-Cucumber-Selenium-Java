@@ -14,63 +14,28 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>7</maven.compiler.source>
         <maven.compiler.target>7</maven.compiler.target>
-        <OSproperty>Android</OSproperty>
-        <localOrCloud>Local</localOrCloud>
-        <country>Ken</country>
-        <env>Auto</env>
-        <isSanity>true</isSanity>
-        <port>4723</port>
-        <wdaPort>8100</wdaPort>
-        <emulator>Nexus_5</emulator>
-        <newDir/>
     </properties>
 
     <dependencies>
-
-        <dependency> <!-- selenium-java-3.14.0 -->
+        <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>3.14.0</version>
         </dependency>
-
-        <dependency><!-- cucumber-java-1.2.2 -->
+        <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>1.2.2</version>
         </dependency>
-
-        <dependency> <!-- cucumber-junit-1.2.2 -->
+        <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-junit</artifactId>
             <version>1.2.2</version>
-        </dependency>
-
-        <dependency> <!-- tag-expression-1.1.1 -->
-            <groupId>io.cucumber</groupId>
-            <artifactId>tag-expressions</artifactId>
-            <version>1.1.1</version>
-        </dependency>
-
-        <dependency> <!--cobertura-1.8 -->
-            <groupId>cobertura</groupId>
-            <artifactId>cobertura</artifactId>
-            <version>1.8</version>
         </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.12.4</version>
-                <configuration>
-                    <includes>
-                        <exclude>**/*TestRunner.java</exclude>
-                    </includes>
-                    <useFile>false</useFile>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>

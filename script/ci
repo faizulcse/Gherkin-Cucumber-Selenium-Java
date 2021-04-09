@@ -15,11 +15,11 @@ startServerWithNode(){
 }
 
 testRun() {
-    docker run --name $1 ${DOCKER_IMAGE} mvn test -Dcucumber.options="--tags @MQA-101" -q
+    docker run --name $1 ${DOCKER_IMAGE} mvn clean install -Dcucumber.options="--tags @MQA-101" -q
 }
 
 copyReportsToJenkins() {
-    sourceLocation=$1':/app/target/cucumber-html/.'
+    sourceLocation=$1':/app/target/cucumber-reports-html/.'
     destinationLocation='.'$2
     docker cp $sourceLocation $destinationLocation
 }
