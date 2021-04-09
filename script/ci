@@ -19,7 +19,7 @@ testRun() {
 }
 
 copyReportsToJenkins() {
-    sourceLocation=$1':/app/target/cucumber-reports-html/.'
+    sourceLocation=$1':/app/target/cucumber-report-html/cucumber-html-reports/.'
     destinationLocation='.'$2
     docker cp $sourceLocation $destinationLocation
 }
